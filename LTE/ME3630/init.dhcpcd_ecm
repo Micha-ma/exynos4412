@@ -1,0 +1,17 @@
+#!/system/bin/sh
+# An unforunate wrapper script 
+# so that the exit code of dhcpcd may be retrieved
+
+DHCPCD_PID=
+
+/system/bin/log -t dhcpcd  "Starting dhcpcd"
+/system/bin/log -t dhcpcd  "Starting dhcpcd_ecm script in dhcpcd_ecm"
+
+dev_path=`/system/bin/getprop ril.device.ecm.path`
+
+/system/bin/dhcpcd $dev_path
+
+DHCPCD_EXIT=$?
+DHCPCD_PID=$!
+
+/system/bin/log -t dhcpcd_ecm "dhcpcd_ecm exited with $DHCPCD_EXIT"
