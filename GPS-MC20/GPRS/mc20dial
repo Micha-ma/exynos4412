@@ -1,0 +1,23 @@
+nodetach
+nolock
+#/dev/ttySAC3
+/data/misc/rild/2
+115200
+user "" 
+password ""
+nocrtscts
+modem
+hide-password
+usepeerdns
+noauth
+noipdefault
+novj
+novjccomp
+noccp
+debug
+defaultroute
+ipcp-accept-local
+ipcp-accept-remote
+connect '/data/chat -s -v -f /etc/ppp/mc20-connect-chat'
+#connect '/usr/sbin/chat -s -v -f /etc/ppp/gprs-connect-chat'
+#disconnect '/bin/chat -v -f /etc/ppp/gprs-disconnect-chat
